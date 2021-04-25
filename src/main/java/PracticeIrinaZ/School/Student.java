@@ -10,21 +10,22 @@ public final class Student extends BasePerson {
         this.grade = grade;
     }
 
-    @Override
-    public void setAge(int age) {
-        if (age > 0) {
-            this.setAge(age);
-        }
+    public int getGrade() {
+        return grade;
     }
 
-    @Override
-    public void setGender(char gender) {
-        if (gender == 'M' || gender == 'F') {
-            super.setGender(gender);
-        } else {
-            System.out.println("Error!");
+    public void printParent(Parent[] parents) {
+        for (Parent parent: parents) {
+            if (parent.getStudent().equals(this)) {
+                System.out.println();
+                System.out.println(
+                        "Student: " + getFirstName() + " " + getLastName() + " " +
+                                getGrade());
+                System.out.println("Parent: " + parent.getFirstName() + " " +
+                        parent.getLastName() + " phone number: " + parent.getPhoneNumber());
+
+            }
         }
     }
-
 
 }

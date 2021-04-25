@@ -6,14 +6,13 @@ public abstract class BasePerson {
     private char gender;
     private int age;
     private String status;
-    private static int countPersons;
     private static String schoolName;
 
     public BasePerson(String firstName, String lastName,
                       char gender, int age, String status) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.setGender(gender);
+        this.gender = gender;
         this.age = age;
         this.status = status;
     }
@@ -46,7 +45,9 @@ public abstract class BasePerson {
         return age;
     }
 
-    public abstract void setAge(int age);
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public String getStatus() {
         return status;
