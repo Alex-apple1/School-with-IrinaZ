@@ -4,11 +4,11 @@ public class Main11 {
     public static void main(String[] args) {
 
         Manager11 manager11 = new Manager11(
-                100, "Anna", 10, 3);
+                100, "Anna", 10);
         Manager11 manager2 = new Manager11(
-                200, "Serg", 15, 3);
+                200, "Serg", 15);
         Director11 director11 = new Director11(
-                100, "Alex", 10, 9);
+                100, "Alex", 10);
 
         Employee11[] employee11s = {manager11, director11};
         Manager11[] manager11s = {manager11, manager2};

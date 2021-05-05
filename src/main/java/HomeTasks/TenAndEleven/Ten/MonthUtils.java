@@ -20,16 +20,33 @@ public class MonthUtils {
     public final static Month nov = new Month ("nov", 30, 22);
     public final static Month dec = new Month ("dec", 31, 23);
 
-    public static Month[] Q1 = {jan, feb, mar};
-    public static Month[] Q2 = {apr, may, jun};
-    public static Month[] Q3 = {jul, aug, sen};
-    public static Month[] Q4 = {oct, nov, dec};
-    public static Month[] Half1 = {jan, feb, mar, apr, may, jun};
-//    public static Month[] Half1 = {Month[Q1], Q2[]};
-    public static Month[] Half2 = {jul, aug, sen, oct, nov, dec};
-//    public static Month[] Half2 = {Q3[], Q4[]};
-    public static Month[] Year = {jan, feb, mar, apr, may, jun, jul, aug, sen, oct, nov, dec};
-//    public static Month[] Year = {Half1[], Half2[]};
+    public static Month[] getQ1() {
+        return new Month[]{jan, feb, mar};
+        }
+
+    public static Month[] getQ2() {
+        return new Month[]{apr, may, jun};
+    }
+
+    public static Month[] getQ3() {
+        return new Month[]{jul, aug, sen};
+    }
+
+    public static Month[] getQ4() {
+        return new Month[]{oct, nov, dec};
+    }
+
+    public static Month[] getHalf1() {
+        return new Month[]{jan, feb, mar, apr, may, jun};
+    }
+
+    public static Month[] getHalf2() {
+        return new Month[]{jul, aug, sen, oct, nov, dec};
+    }
+
+    public static Month[] Year() {
+        return new Month[]{jan, feb, mar, apr, may, jun, jul, aug, sen, oct, nov, dec};
+    }
 
 
 }

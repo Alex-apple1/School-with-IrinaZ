@@ -1,26 +1,16 @@
 package HomeTasks.TenAndEleven;
 
-public class Manager11 extends Worker11 {
+public final class Manager11 extends BaseManager {
 
-    private int numberOfSubordinates;
-    int value;
+    private static final int VALUE = 3;
 
-    public Manager11(int baseSalary, String name, int numberOfSubordinates, int value) {
-        super(baseSalary, name);
-        this.numberOfSubordinates = numberOfSubordinates;
-        this.value = value;
+    public Manager11(int baseSalary, String name, int numberOfSubordinates) {
+        super(baseSalary, name, numberOfSubordinates);
     }
 
-    public int getNumberOfSubordinates() {
-        return numberOfSubordinates;
-    }
-
-    public void setNumberOfSubordinates(int numberOfSubordinates) {
-        this.numberOfSubordinates = numberOfSubordinates;
-    }
-
-    public final int getValue() {
-        return value;
+    @Override
+    protected int getValue() {
+        return VALUE;
     }
 
     public double extraMoney() {
@@ -28,13 +18,5 @@ public class Manager11 extends Worker11 {
         return result;
     }
 
-    @Override
-    public int getSalary() {
-        if (getNumberOfSubordinates() == 0) {
-            return super.getSalary();
-        } else {
-            double extraMoney = getBaseSalary() * (getNumberOfSubordinates() / 100.0 * getValue());
-            return (int) (getBaseSalary() + extraMoney);
-        }
-    }
+
 }

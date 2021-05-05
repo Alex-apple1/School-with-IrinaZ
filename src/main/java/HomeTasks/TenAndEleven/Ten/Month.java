@@ -16,23 +16,11 @@ public final class Month {
         return monthName;
     }
 
-//    public void setMonthName(String monthName) {
-//        this.monthName = monthName;
-//    }
-
     public final int getQuantityOfDays() {
         return quantityOfDays;
     }
 
-//    public void setQuantityOfDays(int quantityOfDays) {
-//        this.quantityOfDays = quantityOfDays;
-//    }
-
     public final int getQuantityOfWorkingDays() {
         return quantityOfWorkingDays;
     }
-
-//    public void setQuantityOfWorkingDays(int quantityOfWorkingDays) {
-//        this.quantityOfWorkingDays = quantityOfWorkingDays;
-//    }
 }

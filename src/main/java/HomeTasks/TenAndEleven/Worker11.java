@@ -8,7 +8,7 @@ public class Worker11 extends Employee11 {
 
     @Override
     public int getSalary() {
-        return 0;
+        return this.getBaseSalary();
     }
 
     @Override

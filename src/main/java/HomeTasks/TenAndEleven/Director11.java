@@ -1,10 +1,15 @@
 package HomeTasks.TenAndEleven;
 
-public final class Director11 extends Manager11 {
+public final class Director11 extends BaseManager {
 
+    private static final int VALUE = 9;
 
-    public Director11(int baseSalary, String name, int numberOfSubordinates, int value) {
-        super(baseSalary, name, numberOfSubordinates, value);
+    public Director11(int baseSalary, String name, int numberOfSubordinates) {
+        super(baseSalary, name, numberOfSubordinates);
     }
 
+    @Override
+    protected int getValue() {
+        return VALUE;
+    }
 }

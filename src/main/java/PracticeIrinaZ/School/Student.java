@@ -19,7 +19,7 @@ public final class Student extends BasePerson {
             if (parent.getStudent().equals(this)) {
                 System.out.println();
                 System.out.println(
-                        "Student: " + getFirstName() + " " + getLastName() + " " +
+                        "Student: " + getFirstName() + " " + getLastName() + ", grade: " +
                                 getGrade());
                 System.out.println("Parent: " + parent.getFirstName() + " " +
                         parent.getLastName() + " phone number: " + parent.getPhoneNumber());

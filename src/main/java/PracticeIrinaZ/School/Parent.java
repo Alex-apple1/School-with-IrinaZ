@@ -1,6 +1,6 @@
 package PracticeIrinaZ.School;
 
-public class Parent extends BasePerson {
+public final class Parent extends BasePerson {
 
     private long phoneNumber;
     private Student student;
