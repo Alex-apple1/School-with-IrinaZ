@@ -1,7 +1,8 @@
 package PracticeIrinaZ.interfaces.School;
 
-import static PracticeIrinaZ.School.Data.FOR_TC_PER_WEEK;
-import static PracticeIrinaZ.School.tests.Assert.aAssert;
+
+import static PracticeIrinaZ.interfaces.School.tests.Assert.aAssert;
+import static PracticeIrinaZ.interfaces.School.ISalary.FOR_TC_PER_WEEK;
 
 public class School {
 
@@ -34,6 +35,10 @@ public class School {
 
         Parent[] parents = new Parent[]{parent1, parent2};
 
+        ISalary salaryForTeacher1 = teacher1;
+        ISalary salaryForTeacher2 = new Teacher("Ivan Petrovich", "Petrov",
+                'M', 40, "Teacher", "Maths", 1, FOR_TC_PER_WEEK);
+
 //        parent1.printParent();
 //        parent2.printParent();
 //        parent3.printParent();
@@ -48,6 +53,12 @@ public class School {
 
         aAssert(EXPECTED_BASE_SALARY, teacher1.getBaseSalary());
         aAssert(EXPECTED_PAY_CHECK, teacher1.getSalary());
+
+        System.out.println(teacher1.getTaxes());
+        System.out.println(salaryForTeacher1.getTaxes());
+        System.out.println(teacher1.getSalaryPerMonth());
+        System.out.println(salaryForTeacher2.getTaxes());
+        System.out.println(salaryForTeacher2.getSalaryPerMonth());
 
     }
 }
